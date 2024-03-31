@@ -1,15 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useRef } from 'react'
+
 
 import "react-confirm-alert/src/react-confirm-alert.css";
 import './App.css'
 import { APP_INSTALLED, BEFORE_INSTALL_PROMPT, INSTALLATION_MESSAGE, INSTALLATION_STATUS, getDeviceInfo } from './helper/helper';
 import { UAParser } from "ua-parser-js";
-import { installationPrompt } from './Elements/InstallationPrompt';
-import { manualPrompt } from './Elements/ManualPrompt';
+import { installationPrompt } from './components/molecules/PWAInstallationPrompts/InstallationPrompt';
+import { manualPrompt } from './components/molecules/PWAInstallationPrompts/ManualPrompt';
+import { Button } from 'flowbite-react';
 function App() {
-  const [count, setCount] = useState(0)
+//  const [count, setCount] = useState(0)
   const { device, pwa } = getDeviceInfo(new UAParser())
  const deferredPrompt = useRef<Event | null>(null)
  const appInstalled = () => {
@@ -69,25 +69,8 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+       <Button>Click me</Button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

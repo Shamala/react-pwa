@@ -4,7 +4,7 @@ import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa'
 // https://vitejs.dev/config/
 const manifestForPlugin: Partial<VitePWAOptions> = {
   registerType: 'prompt',
-  includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+  includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'maskable-icon.png'],
   manifest: {
     name: 'Technologists Dream',
     short_name: 'Tech Dream',
@@ -17,25 +17,8 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     orientation:"portrait",
     icons: [
       {
-        src: '/android-chrome-192x192.png',
-        sizes: '192x192',
-        type: 'image/png'
-      },
-      {
-        src: '/android-chrome-512x512.png',
-        sizes: '512x512',
-        type: 'image/png'
-      },
-      {
-        src: '/apple-touch-icon.png',
-        sizes: '180x180',
-        type: 'image/png',
-        purpose: 'apple touch icon'
-      },
-      {
         src:'/maskable-icon.png',
-        sizes: '225x225',
-        type: 'image/png',
+        sizes: 'any',
         purpose: 'any maskable'
       },
     ],
