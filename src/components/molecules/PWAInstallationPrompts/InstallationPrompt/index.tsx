@@ -22,13 +22,7 @@ export const installationPrompt = async ({ doNotShowAgain, onInstall }: TInstall
                 </div>
                 <div className="flex flex-col gap-6 -mt-12">
                     <div className="flex flex-row justify-between gap-6">
-                        <div className="flex items-start -mr-6">
-                            <Icon
-                                icon="twemoji:books"
-                                width={42}
-                                className="mr-3 h-6 sm:h-9"
-                            />
-                        </div>
+
                         <div className="flex flex-col gap-2">
                             <h4 className="text-[18px] font-bold">
                                 Install Technologists Dream app?

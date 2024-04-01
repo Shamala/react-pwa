@@ -69,11 +69,13 @@ function App() {
     }, 1e3)
   }, [device.isAndroid, device.isIOS, deferredPrompt.current])
   return (
-    <div className="flex flex-col h-screen justify-between">
-      <div className="flex-1 min-h-screen">
+    <>
+      <header></header>
+
+      <main className="flex flex-col min-h-screen">
         <Outlet />
-      </div>
-      <footer className='w-full justify-center flex border-t-4 border-cyan-500 '>
+      </main>
+      <footer className='absolute inset-x-0 bottom-0 w-full flex border-t-4 border-cyan-500 bg-white' style={{ position: 'fixed', bottom: 0 }}>
         <nav className="w-full flex pt-2">
           <div className="flex-1 justify-center flex">
             <Link to="/" className="flex flex-col items-center cursor-pointer" >
@@ -95,7 +97,8 @@ function App() {
           </div>
         </nav>
       </footer>
-    </div >
+
+    </>
   )
 }
 

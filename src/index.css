@@ -18,13 +18,29 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
 }
-
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
 .react-confirm-alert-overlay {
   background: rgb(122 122 122 / 58%) !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
 }
