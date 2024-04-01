@@ -1,5 +1,4 @@
 import { Button, Card } from 'flowbite-react'
-import React from 'react'
 
 const TechIdeas = [
     {
@@ -30,7 +29,7 @@ const TechIdeas = [
 ]
 const Dreams = () => {
     return (
-        <article className='flex flex-col gap-4 p-4 h-full'>
+        <article className='flex flex-col gap-4 p-4'>
             {TechIdeas.map((techIdea) => {
                 return <Card className='max-w-sm mx-auto' imgAlt="PWA Logo" imgSrc={techIdea.image}>
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -1,7 +1,5 @@
 import { faComment, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button } from 'flowbite-react/components/Button'
-import React from 'react'
 
 const Help = () => {
     return (
